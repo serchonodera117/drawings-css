@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .glande{
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        content:"";
+        height: 3rem;
+        width: 3rem;
+        transform: rotate(45deg);
+        border-radius: 15px;
+        margin-top: 2rem;
+        background-color: bisque;
+    }.glande::after{
+        content:"";
+        position: absolute;
+        width: 0.2rem;
+        height: 1.2rem;
+        border-radius: 10px;
+        margin-left: 7px;
+        transform: rotate(135deg);
+        background-color: rgb(255, 255, 255);
+    }
+    .pito{
+        margin-left: auto;
+        margin-right: auto;
+        display: table;
+        content:"";
+        margin-top: -2rem;
+        height: 7rem;
+        width: 3rem;
+        border-radius: 25px 25px 0 0;
+        background-color: bisque;
+    }.pito::before{
+        content:"";
+        margin-top: 4rem;
+        margin-left: -2rem;
+        position:absolute;
+        z-index: 1;
+        border-radius: 50%;
+        width: 4rem;
+        height: 4rem;
+        background-color: bisque;
+    }.pito::after{
+        content:"";
+        margin-top: 4rem;
+        margin-left: 1.5rem;
+        position:absolute;
+        z-index: 1;
+        border-radius: 50%;
+        width: 4rem;
+        height: 4rem;
+        background-color: bisque;
+    }
+</style>
+<body>
+    <div class="page-container">
+        <div class="glande"></div>
+        <div class="pito"></div>
+    </div>
+</body>
+</html>

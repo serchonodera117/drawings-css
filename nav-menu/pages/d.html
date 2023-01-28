@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    :root{
+        --piel: rgb(225, 203, 203);
+    }
+    body{background-color:rgb(86, 67, 67)}
+    .cabeza{
+        margin-left: auto;
+        margin-right: auto;
+        display: table;
+        margin-top: 13rem;
+
+    }.mibase{
+        width: 20rem;
+        height: 15rem;
+        border-radius: 50%;
+        background-color: var(--piel);
+    }.mibase:before{
+        position: absolute;
+        content:'';
+        width: 20rem;
+        height: 13rem;
+        margin-top: 8rem;
+        border-radius:0px 0px 60px 70px;
+        background-color: var(--piel);
+    }.mibase:after{
+        position: absolute;
+        content:'';
+        width: 20rem;
+        height: 13rem;
+        background-color: var(--piel);
+        border-radius: 0px 100px 100px 80px;
+        margin-left: 1rem;
+        margin-top: 8.5rem;
+    }.ojo_i{
+        position: absolute;
+        z-index: 1;
+        height:5rem;
+        width:4rem;
+        border-radius: 50%;
+        margin-top: 7rem;
+        margin-left:5rem;
+        background-color: black;
+    }.ojo_i::before{
+        content:"";
+        position: absolute;
+        width: 6rem;
+        margin-left: -2rem;
+        height: 1rem;
+        transform: rotate(-5deg);
+        background-color: black;
+        border-radius: 200px 0px 180px 0px;
+    }.ojo_i::after{
+        content:"";
+        position: absolute;
+        width: 3.7rem;
+        height: 0.7rem;
+        margin-top: 4.5rem;
+        border-radius: 0px 0px 100px 300px;
+        transform: rotate(-5deg);
+        background-color: black;
+    }.ceja_i{
+        width:8rem;
+        height: 1.5rem;
+        position: absolute;
+        margin-top: -2.5rem;
+        margin-left: -3.5rem;
+        transform: rotate(-5deg);
+        border-radius: 200px 0px;
+        background-color: black;
+    }.ceja_i::before{
+        content:"";
+        margin-top: 1.9rem;
+        position: absolute;
+        background-color: black;
+        height: 0.2rem;
+        width: 4rem;
+        margin-left: 3rem;
+    }
+    .ceja_d{
+        width:8rem;
+        height: 1.5rem;
+        position: absolute;
+        margin-top: -2.5rem;
+        margin-left: -1rem;
+        transform: rotate(5deg);
+        border-radius: 0px 200px;
+        background-color: black;
+    }.ceja_d::after{
+        content:"";
+        margin-top: 1.9rem;
+        position: absolute;
+        background-color: black;
+        height: 0.2rem;
+        width: 4rem;
+        margin-left: rem;
+    }
+    .ojo_d{
+        position: absolute;
+        z-index: 1;
+        height:5rem;
+        width:4rem;
+        border-radius: 50%;
+        margin-top: 7rem;
+        margin-left:13rem;
+        background-color: black;
+    }.ojo_d::before{
+        content:"";
+        position: absolute;
+        width: 6rem;
+        height: 1rem;
+        border-radius: 0px 200px 0px 100px;
+        transform: rotate(5deg);
+        background-color: black;
+    }.ojo_d::after{
+        content:"";
+        position: absolute;
+        width: 3.7rem;
+        height: 0.7rem;
+        margin-top: 4.5rem;
+        border-radius: 0px 0px 300px 100px;
+        transform: rotate(5deg);
+        background-color: black;
+    }.cabello{
+        position: absolute;
+        z-index: -1;
+        background-color: black;
+        height: 20rem;
+        width: 24rem;
+        margin-top: -11rem;
+        margin-left: -5.7rem;
+        border-radius: 50%;
+    }.cabello:before{
+        content:"";
+        position: absolute;
+        width:13rem;
+        height: 15rem;
+        border-radius: 50%;
+        background-color: black;
+        margin-left: 16rem;
+        margin-top: 3rem;
+    }.cabello-frente{
+        position: absolute;
+        width: 1.8rem;
+        z-index: 2;
+        height: 9rem;
+        margin-top: -1rem;
+        margin-left: 9rem;
+        border-radius: 0px 0px 50% 50%;
+        transform: rotate(10deg);
+        background-color: black;
+    }.cabello-frente::before{
+       content: "";
+        position: absolute;
+        width: 1.8rem;
+        z-index: 2;
+        height: 12rem;
+        margin-top: -1rem;
+        margin-left: 1.5rem;
+        border-radius: 0px 0px 50% 50%;
+        transform: rotate(-5deg);
+        background-color: black;
+    }.cabello-frente::after{
+        content: "";
+        position: absolute;
+        width: 1.8rem;
+        z-index: 2;
+        height: 10rem;
+        margin-top: -1rem;
+        margin-left: 3rem;
+        border-radius: 0px 0px 50% 50%;
+        transform: rotate(-5deg);
+        background-color: black;
+    }.cabello-frente1{
+        position: absolute;
+        z-index: 2;
+        width: 4rem;
+        height: 10rem;
+        margin-top: -3rem;
+        margin-left: -3rem;
+        border-radius: 10%;
+        background-color: black;
+        transform: rotate(-35deg);
+    }.cabello-frente1:before{
+        content: "";
+        position: absolute;
+        width: 4rem;
+        height: 10rem;
+        margin-top: -0.7rem;
+        margin-left: -7rem;
+        background-color: rgb(0, 0, 0);
+        transform: rotate(65deg);
+    }.cabello-frente1::after{
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 80px;
+    border-radius: 50% 0 0 50%;
+    margin-left: 9rem;
+    margin-top: 9rem;
+    background-color: rgb(0, 0, 0);
+ }.mechon-izquierdo{
+    position: absolute;
+    z-index: 3;
+    width: 10rem;
+    margin-left: -8rem;
+    margin-top: -5rem;
+    border-radius: 50% 0 0 50%;
+    height: 30rem;background-color: black;
+ }/*.mechon-izquierdo::before{
+    content: "";
+    position: absolute;
+    height: 10rem;
+    width:2rem;
+    background-color: bisque;
+ } */.mechon-derecho{
+    position: absolute;
+    height: 27rem;
+    width: 10rem;
+    z-index: -1;
+    margin-top: -3rem;
+    margin-left: 14rem;
+    border-radius: 0 30% 30% 0;
+    background-color: black;
+ }.base-ropa{
+    z-index: -1;
+    position: absolute;
+    height:5rem;
+    width: 15rem;
+    margin-top: 21rem;
+    margin-left: 2rem;
+    border: 3px solid rgb(198, 177, 177);
+    border-radius: 50% 50% 0 0;
+    background-color: aliceblue;
+ }.base-ropa::before{
+    content: "";
+    position: absolute;
+    height:3rem;
+    width:5.5rem;
+    border-radius: 15%;
+    margin-left: 2rem;
+    margin-top: -1rem;
+    border: 3px solid rgb(198, 177, 177);
+    transform: rotate(30deg);
+    background-color: aliceblue;
+ }.base-ropa::after{
+    content: "";
+    position: absolute;
+    height:3rem;
+    width: 5.5rem;
+    border-radius: 15%;
+    margin-left: 8rem;
+    margin-top: -1rem;
+    border: 3px solid rgb(198, 177, 177);
+    transform: rotate(-30deg);
+    background-color: aliceblue;
+ }.moño{
+    position: absolute;
+    height:2rem;
+    width:2rem;
+    z-index: 1;
+    border-radius: 20%;
+    margin-left: 9rem;
+    margin-top: 22rem;
+    background-color: red;
+    border: 3px solid rgb(138, 4, 4);
+ }.moño:before{
+    content: "";
+    position: absolute;
+    width: 1.2rem;
+    height: 3rem;
+    z-index: 0;
+    margin-top: 1rem;
+    border-radius: 20%;
+    border-bottom: 3px solid rgb(138, 4, 4);;
+    margin-left: -0.2rem;
+    transform: rotate(20deg);
+    background-color: red;
+ }.moño::after{
+    content: "";
+    position: absolute;
+    width: 1.2rem;
+    height: 3rem;
+    z-index: 0;
+    margin-top: 1rem;
+    border-radius: 20%;
+    border-bottom: 3px solid rgb(138, 4, 4);;
+    margin-left: 1.2rem;
+    transform: rotate(-20deg);
+    background-color: red;
+ }.broche{
+    position: absolute;
+    z-index: 4;
+    width: 4rem;
+    height: 1.3rem;
+    margin-top: 1rem;
+    border-radius: 15%;
+    margin-left: 17rem;
+    transform: rotate(-25deg);
+    background-color: brown;
+ }.broche::before{
+    content: "";
+    position: absolute;
+    width: 4rem;
+    height: 1.3rem;
+    margin-top: 2rem;
+    border-radius: 15%;
+    background-color: brown;
+ }.broche::after{
+    content: "";
+    position: absolute;
+    width: 0.7rem;
+    height: 0.7rem;
+    border-radius: 50%;
+    margin-left: 3rem;
+    margin-top: 0.3rem;
+    border: 2px solid rgb(86, 53, 53);
+    background-color: aqua;
+ }.ojeras{
+    z-index: 2;
+    position: absolute;
+    height: 0.3rem;
+    width: 2rem;
+    margin-top: 12.5rem;
+    margin-left: 7.5rem;
+    rotate: -30deg;
+    border-radius:  90% 0;
+    background-color: rgb(120, 103, 103);
+ }.ojeras::before{
+    content:"";
+    z-index: 2;
+    position: absolute;
+    height: 0.3rem;
+    width: 2rem;
+    margin-top: 2rem;
+    margin-left: 4rem;
+    rotate: 65deg;
+    border-radius:  90% 0;
+    background-color: rgb(120, 103, 103);
+ }
+ .contenedor-lineas{
+    position: absolute;
+    margin-top: 13rem;
+    margin-left: -1.5rem;
+ }.contenedor-lineas1{
+    position: absolute;
+    margin-top: 13rem;
+    margin-left: 7rem;
+ } ul li{
+    margin-left: 1rem;
+    margin-right: 1rem;
+    display: inline-block;
+}
+ .linea{
+    position: absolute;
+    z-index: 3;
+    height: 1rem;
+    width: 3rem;
+    border-radius: 40%;
+    rotate:-45deg;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    background-color: rgba(237, 97, 137, 0.995);
+ }
+</style>
+<body>
+    <div class="container">
+    <div class="cabeza">
+        <div class="mibase">
+            <div class="broche"></div>
+            <div class="cabello"></div>
+            <div class="cabello-frente">
+                <div class="cabello-frente1"></div>
+            </div>
+            <div class="mechon-izquierdo"></div>
+            <div class="mechon-derecho"></div>
+            <div class="ojo_i">
+                <div class="ceja_i"></div>
+            </div>
+            <div class="ojo_d">
+                <div class="ceja_d"></div>
+            </div>
+            <div class="contenedor-lineas">
+                <ul>
+                    <li><div class="linea"></div></li>           
+                    <li><div class="linea"></div></li>           
+                    <li><div class="linea"></div></li>       
+                </ul>
+            </div>
+            <div class="contenedor-lineas1">
+                <ul>
+                    <li><div class="linea"></div></li>           
+                    <li><div class="linea"></div></li>           
+                    <li><div class="linea"></div></li>       
+                </ul>
+            </div>
+            <div class="ojeras"></div>
+            <div class="base-ropa"></div>
+            <div class="moño"></div>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
