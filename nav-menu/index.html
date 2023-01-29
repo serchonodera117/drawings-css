@@ -51,23 +51,23 @@
         <div class="mynav">
             <ul class="listmenu">
                 <li class="option">
-                    <label for="option1" onclick="option1()">op1</label>
+                    <label for="option1" onclick="selectOption(0)">op1</label>
                     <input class="optionRadio" type="radio" id="option1" name="op1" value="pages/p.html">
                 </li>
                 <li class="option">
-                    <label for="option2" onclick="option2()">op2</label>
+                    <label for="option2" onclick="selectOption(1)">op2</label>
                     <input class="optionRadio" type="radio" id="option2" name="op1" value="pages/d.html">
                 </li>
                 <li class="option">
-                    <label for="option3">op3</label>
+                    <label for="option3" onclick="selectOption(2)">op3</label>
                     <input class="optionRadio" type="radio" id="option3" name="op1" value="3">
                 </li>
                 <li class="option">
-                    <label for="option4">op4</label>
+                    <label for="option4" onclick="selectOption(3)">op4</label>
                     <input class="optionRadio"type="radio" id="option4" name="op1" value="4">
                 </li>
                 <li class="option">
-                    <label for="option5">op5</label>
+                    <label for="option5" onclick="selectOption(4)">op5</label>
                     <input class="optionRadio" type="radio" id="option5" name="op1" value="5">
                 </li>
             </ul>
@@ -76,18 +76,8 @@
     </div>
     <script>
       let iframe=document.getElementById('mypage')
-        function option1(){
-            let radio = document.getElementById("option1").value;
-            iframe.src=radio
-        }
-        function option2(){
-            let radio = document.getElementById("option2").value;
-            iframe.src=radio
-        }
-        function option3(){}
-        function option4(){}
-        function option5(){}
-
+      let rGroup = document.querySelectorAll('input[name="op1"]') 
+      function selectOption(option) {  iframe.src=rGroup[option].value}
     </script>
 </body>
 </html>
