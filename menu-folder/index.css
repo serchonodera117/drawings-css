@@ -1,0 +1,58 @@
+:root{
+    --background-page: rgb(245, 227, 227);
+    --bg-body: rgb(242, 226, 226);
+}
+body{
+    background-color: var(--background-page);
+}
+
+.container{
+    background-color: white;
+    padding-left: 15px;
+    border-radius: 10px;
+}
+p{
+    width: 15rem;
+    text-align: justify;
+}
+.container{padding: 5px;}
+.menu{
+    display: flex;
+    list-style: none;
+    margin-left: 40px; 
+}.menu li{
+    word-break: break-all;
+    background-color: rgb(198, 138, 138);
+    border: 3px solid rgb(139, 89, 89);
+    border-radius: 5px 5px 0 0;
+    padding: 10px;
+    height: 1rem;
+    z-index: 0;
+    margin-left: -40px;
+    transition: 0.3s;
+}.menu li:hover{
+    background-color: rgb(184, 198, 138);
+    border: 3px solid rgb(112, 139, 89);
+    margin-right: -10px;
+    height: 1.3rem;
+    margin-bottom: -1.1rem;
+    z-index: 1;
+    transform: translateY(-5px)
+}
+hr{margin-top:  -18px;}
+
+.menu li:has(input[type="radio"]:checked){
+    background-color: white;
+    transform: translateY(-10px);
+    z-index: 2;
+    height: 1.8rem;
+    border-bottom: 0px;
+    margin-bottom: -1.9rem;
+
+}
+section{
+    margin-left: 2rem;
+    display: none;
+}.image{
+    object-fit: cover;
+}
